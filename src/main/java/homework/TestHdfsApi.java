@@ -15,7 +15,7 @@ public class TestHdfsApi {
     private static FileSystem fs;
     static {
         try {
-            fs=FileSystem.get(new URI(url),new Configuration(),"groot");
+             fs=FileSystem.get(new URI(url),new Configuration(),"groot");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

@@ -60,7 +60,7 @@ public class TotalScoreMR {
         FileInputFormat.setInputPaths(job,new Path(args[0]));
         FileOutputFormat.setOutputPath(job,new Path(args[1]));
         FileOutputFormat.setCompressOutput(job,true);
-        FileOutputFormat.setOutputCompressorClass(job,(Class<? extends CompressionCodec>) new GzipCodec().getClass());
+        FileOutputFormat.setOutputCompressorClass(job, GzipCodec.class);
         job.waitForCompletion(true);
     }
 }
